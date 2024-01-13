@@ -1,3 +1,5 @@
+import styled from "@emotion/styled";
+
 type SpinnerProps = {
   thickness: string;
   speed: string;
@@ -14,14 +16,25 @@ const Spinner = ({
   size,
 }: SpinnerProps) => {
   return (
-    <Spinner
-      thickness={thickness}
-      speed={speed}
-      color={color}
-      emptyColor={emptyColor}
-      size={size}
-    />
+    <StyledSpinner>
+      <Spinner
+        thickness={thickness}
+        speed={speed}
+        color={color}
+        emptyColor={emptyColor}
+        size={size}
+      />
+    </StyledSpinner>
   );
 };
 
 export default Spinner;
+
+const StyledSpinner = styled.div`
+  width: 100%;
+  height: 100dhv;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+`;
