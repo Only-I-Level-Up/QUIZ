@@ -8,7 +8,7 @@ type AppButtonProps = {
   className?: string;
   disabled?: boolean;
   width?: string;
-  onClick: (e?: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const AppButton = ({
